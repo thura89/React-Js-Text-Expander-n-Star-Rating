@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import StarRating from "./StarRating";
+import { TextXpander } from "./TextXpander";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <StarRating></StarRating>
+        <StarRating color="red"></StarRating>
+        <StarRating
+          color="Blue"
+          messages={["Bad", "Not Good", "Good", "Nice", "Amazing"]}
+        ></StarRating>
+      </div>
+      <div>
+        <TextXpander></TextXpander>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
